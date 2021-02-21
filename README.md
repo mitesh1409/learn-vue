@@ -44,7 +44,7 @@ Basic knowledge of HTML, CSS & JavaScript.
 
 ## 2 - Installation
 
-Checkout 2-installation branch:
+Checkout 2-installation branch:  
 `git fetch && git checkout -b 2-installation origin/2-installation`
 
 Vue.js can be installed in the following ways:
