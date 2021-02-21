@@ -97,5 +97,26 @@ Checkout 3-vue-instance branch:
 
 ---
 
+## 4 - Attribute Binding
+
+Checkout 4-attribute-binding branch:  
+`git fetch && git checkout -b 4-attribute-binding origin/4-attribute-binding`  
+
+- Data can be bound to HTML attributes  
+  `:src`  
+  `:alt`  
+  `:title`  
+  `:class`  
+  `:href`  
+  `:style`  
+  etc.  
+
+- Syntax is `v-bind:` or use `:` shorthand  
+
+- This is "one way" data flow  
+  From instance data -> template  
+
+---
+
 ## License
 [MIT](https://opensource.org/licenses/MIT)  
