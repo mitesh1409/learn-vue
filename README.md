@@ -114,7 +114,7 @@ Checkout 4-attribute-binding branch:
 - Syntax is `v-bind:` or use `:` shorthand  
 
 - This is "one way" data flow  
-  From instance data -> template  
+  From instance data to template  
 
 ---
 
