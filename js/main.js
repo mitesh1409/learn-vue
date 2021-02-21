@@ -2,8 +2,8 @@ var app = new Vue({
     el: '#app',
 
     data: {
-        product: 'Socks',
+        product: 'T-Shirt',
 
-        description: 'A pair of warm fuzzy socks'
+        description: 'A T-Shirt with Vue.js Badge'
     }
 });
