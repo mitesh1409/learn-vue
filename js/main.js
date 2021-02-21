@@ -10,6 +10,10 @@ var app = new Vue({
 
         imageAlt: 'Grey T-Shirt with Vue.js Badge',
 
-        imageTitle: 'Grey T-Shirt with Vue.js Badge'
+        imageTitle: 'Grey T-Shirt with Vue.js Badge',
+
+        inStock: true,
+
+        onSale: false
     }
 });
