@@ -5,14 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Vue.js</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="nav-bar"></div>
+
     <div id="app">
-        <h1>{{ product }}</h1>
+        <div class="product">
+            <div class="product-image">
+                <img :src="image" :alt="imageAlt" :title="imageTitle">
+            </div>
 
-        <p>{{ product }} wishlisted by 1000 customers!</p>
+            <div class="product-info">
+                <h1>{{ product }}</h1>
 
-        <p>{{ description }}</p>
+                <p>{{ product }} wishlisted by 1000 customers!</p>
+
+                <p>{{ description }}</p>
+            </div>
+        </div>
     </div>
 
     <!-- Include Vue.js Development Version -->
