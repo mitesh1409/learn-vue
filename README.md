@@ -42,5 +42,32 @@ Basic knowledge of HTML, CSS & JavaScript.
 
 ---
 
+## 2 - Installation
+
+Checkout 2-installation branch:
+`git fetch && git checkout -b 2-installation origin/2-installation`
+
+Vue.js can be installed in the following ways:
+
+- Using direct <script> include
+  Simply download and include Vue.js with a script tag.
+  For example,
+  `<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>`
+
+  - Development Version (with full warnings + debug mode, suitable for development)
+  - Production Version (warnings stripped, optimized for production)
+
+- Using NPM
+  `npm install vue`
+
+- Using Vue CLI
+  `vue create <project-name>`
+
+**After installation Vue is available as global variable "Vue"**
+
+Reference Link: [Vue.js 2.x Installation](https://vuejs.org/v2/guide/installation.html)
+
+---
+
 ## License
 [MIT](https://opensource.org/licenses/MIT)  
