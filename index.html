@@ -22,6 +22,11 @@
                 <p>{{ product }} wishlisted by 1000 customers!</p>
 
                 <p>{{ description }}</p>
+
+                <p v-if="inStock">In Stock</p>
+                <p v-else>Out of Stock</p>
+
+                <p v-if="onSale">On Sale!</p>
             </div>
         </div>
     </div>
