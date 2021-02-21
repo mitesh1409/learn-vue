@@ -69,5 +69,33 @@ Reference Link: [Vue.js 2.x Installation](https://vuejs.org/v2/guide/installatio
 
 ---
 
+## 3 - Vue Instance
+
+Checkout 3-vue-instance branch:  
+`git fetch && git checkout -b 3-vue-instance origin/3-vue-instance`  
+
+- Create Vue instance  
+  `new Vue({})`  
+
+- Vue instance is the “Root” of every Vue application  
+
+- Plugging into an element in the DOM  
+  Set "el" in the options  
+
+- Set instance data  
+  Set "data" in the options  
+
+- Using “Mustache” `{{ }}` syntax to display data  
+  We can use expressions inside `{{ }}`  
+
+- One way data flow  
+  From instance data to template  
+
+- Vue is “Reactive”  
+  Data is linked to every place in the template where it is referenced/used.  
+  So whenever data changes, template is updated automatically.  
+
+---
+
 ## License
 [MIT](https://opensource.org/licenses/MIT)  
