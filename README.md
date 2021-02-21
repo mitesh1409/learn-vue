@@ -118,5 +118,25 @@ Checkout 4-attribute-binding branch:
 
 ---
 
+## 5 - Conditional Rendering
+
+Checkout 5-conditional-rendering branch:  
+`git fetch && git checkout -b 5-conditional-rendering origin/5-conditional-rendering`  
+
+- Vue directives to conditionally render elements.  
+  - `v-if`  
+  - `v-else-if`  
+  - `v-else`  
+  - `v-show`  
+
+- There is an expression inside directive's quote which evaluates to true/false.  
+  Based on this element is rendered.  
+
+- `v-show` only toggles visibility of an element instead of inserting/removing it from the DOM.  
+  With `v-show` the element is always rendered with visibility on or off.  
+  Use `v-show` if you need to toggle something very often.  
+
+---
+
 ## License
 [MIT](https://opensource.org/licenses/MIT)  
