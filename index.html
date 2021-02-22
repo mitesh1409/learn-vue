@@ -27,6 +27,10 @@
                 <p v-else>Out of Stock</p>
 
                 <p v-if="onSale">On Sale!</p>
+
+                <ul v-if="details.length">
+                    <li v-for="(detail, index) in details" :key="index">{{ detail }}</li>
+                </ul>
             </div>
         </div>
     </div>

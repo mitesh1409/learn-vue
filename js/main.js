@@ -14,6 +14,12 @@ var app = new Vue({
 
         inStock: true,
 
-        onSale: false
+        onSale: false,
+
+        details: [
+            'Cotton, Polyester & Rayon Blend',
+            'Round Neck',
+            'Short Sleeves'
+        ],
     }
 });
