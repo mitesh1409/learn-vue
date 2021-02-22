@@ -138,5 +138,25 @@ Checkout 5-conditional-rendering branch:
 
 ---
 
+## 6 - List Rendering
+
+Checkout 6-list-rendering branch:  
+`git fetch && git checkout -b 6-list-rendering origin/6-list-rendering`  
+
+- `v-for` directive is used to iterate over an array of items.
+  For example, `v-for="item in items"`
+
+- We can iterate over an array of objects as well.
+  Using dot `.` notation we can access object properties/attributes.
+
+- It is recommended to provide a key attribute with `v-for` whenever possible.
+  This gives a unique key to each rendered element.
+
+- Use string or numeric values for `v-for` keys.
+
+- Using `v-if` and `v-for` together is not recommended.
+
+---
+
 ## License
 [MIT](https://opensource.org/licenses/MIT)  
