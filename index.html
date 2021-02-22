@@ -27,6 +27,20 @@
                 <p v-else>Out of Stock</p>
 
                 <p v-if="onSale">On Sale!</p>
+
+                <ul v-if="details.length">
+                    <li v-for="(detail, index) in details" :key="index">{{ detail }}</li>
+                </ul>
+
+                <div v-for="variant in variants"
+                    :key="variant.id">
+                    {{ variant.color }}
+                </div>
+
+                <select name="product-size" id="product-size">
+                    <option value="">Select Your Size</option>
+                    <option v-for="(size, index) in sizes" :key="index" value="size">{{ size }}</option>
+                </select>
             </div>
         </div>
     </div>

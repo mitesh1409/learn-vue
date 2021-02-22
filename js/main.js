@@ -14,6 +14,31 @@ var app = new Vue({
 
         inStock: true,
 
-        onSale: false
+        onSale: false,
+
+        details: [
+            'Cotton, Polyester & Rayon Blend',
+            'Round Neck',
+            'Short Sleeves'
+        ],
+
+        variants: [
+            {
+                id: 1001,
+                color: 'Grey'
+            },
+            {
+                id: 1002,
+                color: 'Black'
+            }
+        ],
+
+        sizes: [
+            'S',
+            'M',
+            'L',
+            'XL',
+            'XXL'
+        ]
     }
 });
