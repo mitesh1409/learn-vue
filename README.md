@@ -168,12 +168,12 @@ Checkout 7-event-handling branch:
 
 - The shorthand for `v-on` is `@`  
 
-- We can specify any type of DOM event to listen for:
-  - click
-  - submit
-  - mouseover
-  - keyup
-  etc.
+- We can specify any type of DOM event to listen for:  
+  - click  
+  - submit  
+  - mouseover  
+  - keyup  
+  etc.  
 
 ---
 
