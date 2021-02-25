@@ -13,7 +13,7 @@
     <div id="app">
         <div class="product">
             <div class="product-image">
-                <img :src="image" :alt="imageAlt" :title="imageTitle">
+                <img :src="image.src" :alt="image.alt" :title="image.title">
             </div>
 
             <div class="product-info">
@@ -33,14 +33,25 @@
                 </ul>
 
                 <div v-for="variant in variants"
-                    :key="variant.id">
+                    :key="variant.id"
+                    @mouseover="updateVariantImage(variant.image)">
                     {{ variant.color }}
                 </div>
 
-                <select name="product-size" id="product-size">
-                    <option value="">Select Your Size</option>
-                    <option v-for="(size, index) in sizes" :key="index" value="size">{{ size }}</option>
-                </select>
+                <div>
+                    <select name="product-size" id="product-size">
+                        <option value="">Select Your Size</option>
+                        <option v-for="(size, index) in sizes" :key="index" value="size">{{ size }}</option>
+                    </select>
+                </div>
+
+                <button @click="addToCart">Add to Cart</button>
+
+                <button @click="removeFromCart">Remove from Cart</button>
+
+                <div class="cart">
+                    <p>Cart({{ cart }})</p>
+                </div>
             </div>
         </div>
     </div>
