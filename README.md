@@ -158,5 +158,24 @@ Checkout 6-list-rendering branch:
 
 ---
 
+## 7 - Event Handling
+
+Checkout 7-event-handling branch:  
+`git fetch && git checkout -b 7-event-handling origin/7-event-handling`  
+
+- `v-on` directive is used to listen to DOM events and run JavaScript when they are triggered.  
+  For example, `v-on:submit`, `v-on:click`, `v-on:mouseover` etc.  
+
+- The shorthand for `v-on` is `@`  
+
+- We can specify any type of DOM event to listen for:
+  - click
+  - submit
+  - mouseover
+  - keyup
+  etc.
+
+---
+
 ## License
 [MIT](https://opensource.org/licenses/MIT)  
