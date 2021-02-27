@@ -17,9 +17,9 @@
             </div>
 
             <div class="product-info">
-                <h1>{{ product }}</h1>
+                <h1>{{ title }}</h1>
 
-                <p>{{ product }} wishlisted by 1000 customers!</p>
+                <p>{{ title }} wishlisted by 1000 customers!</p>
 
                 <p>{{ description }}</p>
 
@@ -37,9 +37,9 @@
                     <li v-for="(detail, index) in details" :key="index">{{ detail }}</li>
                 </ul>
 
-                <div v-for="variant in variants"
+                <div v-for="(variant, index) in variants"
                     :key="variant.id"
-                    @mouseover="updateVariantImage(variant.image)"
+                    @mouseover="updateVariant(index)"
                     class="color-box"
                     :style="{ backgroundColor: variant.color }">
                 </div>
