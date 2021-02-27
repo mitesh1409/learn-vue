@@ -4,15 +4,9 @@ var app = new Vue({
     data: {
         product: 'T-Shirt',
 
+        brand: 'Vue.js',
+
         description: 'A T-Shirt with Vue.js Badge',
-
-        image: {
-            src: './images/grey-t-shirt.jpeg',
-            alt: 'Grey T-Shirt with Vue.js Badge',
-            title: 'Grey T-Shirt with Vue.js Badge'
-        },
-
-        inStock: false,
 
         onSale: true,
 
@@ -30,7 +24,8 @@ var app = new Vue({
                     src: './images/grey-t-shirt.jpeg',
                     alt: 'Grey T-Shirt with Vue.js Badge',
                     title: 'Grey T-Shirt with Vue.js Badge'
-                }
+                },
+                quantity: 99
             },
             {
                 id: 1002,
@@ -39,9 +34,12 @@ var app = new Vue({
                     src: './images/black-t-shirt.jpeg',
                     alt: 'Black T-Shirt with Vue.js Badge',
                     title: 'Black T-Shirt with Vue.js Badge'
-                }
+                },
+                quantity: 0
             }
         ],
+
+        selectedVariant: 0,
 
         sizes: [
             'S',
@@ -69,8 +67,22 @@ var app = new Vue({
             }
         },
 
-        updateVariantImage(variantImage) {
-            this.image = variantImage;
+        updateVariant(variantIndex) {
+            this.selectedVariant = variantIndex;
         } 
+    },
+
+    computed: {
+        title() {
+            return this.brand + ' ' + this.product;
+        },
+
+        image() {
+            return this.variants[this.selectedVariant].image;
+        },
+
+        inStock() {
+            return this.variants[this.selectedVariant].quantity;
+        }
     }
 });

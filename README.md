@@ -245,5 +245,21 @@ Checkout 8-class-and-style-binding branch:
 
 ---
 
+## 9 - Computed Properties
+
+Checkout 9-computed-properties branch:  
+`git fetch && git checkout -b 9-computed-properties origin/9-computed-properties`  
+
+- Computed properties calculate a value rather than store a value.  
+
+- Computed properties are derived from existing data.  
+
+- Computed properties are cached until its dependencies change.  
+  So for an expensive operations, use computed properties instead of methods to get caching benefits.  
+
+- Computed properties should be used for the presentation purpose only.  
+
+- Don't modify data through it.  
+
 ## License
 [MIT](https://opensource.org/licenses/MIT)  
