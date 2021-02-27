@@ -289,6 +289,9 @@ Checkout 10-components branch:
 
 - We can specify requirements for the props a component is receiving.  
 
+- Props are meant to be "read-only". Just consume as they are received from parent. Don't modify them.  
+  Why? Because when the data changes in parent it is passed to child, this will update props in place resulting in loss of modifications.  
+
 ---
 
 ## License

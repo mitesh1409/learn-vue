@@ -1,3 +1,19 @@
+Vue.component('product-details', {
+    template: `
+    <ul v-if="details.length">
+        <li v-for="(detail, index) in details" :key="index">{{ detail }}</li>
+    </ul>
+    `,
+
+    props: {
+        details: {
+            type: Array,
+            required: true
+        }
+    },
+});
+
+
 Vue.component('product', {
     template: `
         <div class="product">
@@ -22,9 +38,7 @@ Vue.component('product', {
                     <span :class="[highlightSale, onSaleFont]">On Sale!</span>
                 </div>
 
-                <ul v-if="details.length">
-                    <li v-for="(detail, index) in details" :key="index">{{ detail }}</li>
-                </ul>
+                <product-details :details="details"></product-details>
 
                 <div v-for="(variant, index) in variants"
                     :key="variant.id"
@@ -67,19 +81,19 @@ Vue.component('product', {
     data: function () {
         return {
             product: 'T-Shirt',
-    
+
             brand: 'Vue.js',
-    
+
             description: 'A T-Shirt with Vue.js Badge',
-    
+
             onSale: true,
-    
+
             details: [
                 'Cotton, Polyester & Rayon Blend',
                 'Round Neck',
                 'Short Sleeves'
             ],
-    
+
             variants: [
                 {
                     id: 1001,
@@ -102,9 +116,9 @@ Vue.component('product', {
                     quantity: 0
                 }
             ],
-    
+
             selectedVariant: 0,
-    
+
             sizes: [
                 'S',
                 'M',
@@ -112,11 +126,11 @@ Vue.component('product', {
                 'XL',
                 'XXL'
             ],
-    
+
             cart: 0,
-    
+
             highlightSale: 'highlightSale',
-    
+
             onSaleFont: 'onSaleFont'
         };
     },
