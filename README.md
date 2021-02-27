@@ -177,5 +177,73 @@ Checkout 7-event-handling branch:
 
 ---
 
+## 8 - Class and Style Binding
+
+Checkout 8-class-and-style-binding branch:  
+`git fetch && git checkout -b 8-class-and-style-binding origin/8-class-and-style-binding`  
+
+- Data can be bound to an element's `style`/`class` attribute.  
+
+- Expressions can be used to evaluate whether a class/CSS will be applied or not.  
+
+- Examples  
+  1. Style Binding  
+    `:style="{ backgroundColor: variant.color }` evaluates to `style="{ background-color: grey }"`  
+
+  2. Style Binding using an Object  
+    `:style="someStyleObject"` where `someStyleObject` is set in the `data` as follows  
+      ```
+      data: {  
+        someStyleObject: {  
+          color: 'red',  
+          font-size: '15px'  
+        }  
+      }  
+      ```
+      this evaluates to  
+      `style="{color: red; font-size: '15px'}"`  
+
+  3. Style Binding using an Array  
+    We can bind an array of style objects, to do this we can write `:style=[styleObject1, styleObject2]`  
+
+  4. Class Binding  
+    `:class="{ disabledButton: !inStock }` evaluates to `class="disabledButton"` when `inStock` is `false`  
+    `:class="{ active: activeClass, 'text-danger': errorClass }"`  with the following data
+      ```
+      data: {  
+        activeClass: true,  
+        errorClass: false  
+      }  
+      ```
+      this evaluates to  
+      `class="active"`  
+
+  5. Class Binding using an Object  
+    `:class="someClassObject"` where `someClassObject` is set in the `data` as follows  
+      ```
+      data: {  
+        someClassObject: {  
+          active: true,  
+          'text-danger': false  
+        }  
+      }  
+      ```
+      this evaluates to  
+      `class="active"`  
+
+  6. Class Binding using an Array  
+    We can bind an array of classes, to do this we can write `:class="[ activeClass, errorClass ]"`  
+    with the following data  
+      ```
+      data: {  
+        activeClass: 'active',  
+        errorClass: 'text-danger'  
+      }  
+      ```
+      this evaluates to  
+      `class="active text-danger"`  
+
+---
+
 ## License
 [MIT](https://opensource.org/licenses/MIT)  
