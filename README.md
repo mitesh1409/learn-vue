@@ -261,5 +261,38 @@ Checkout 9-computed-properties branch:
 
 - Don't modify data through it.  
 
+---
+
+## 10 - Components
+
+Checkout 10-components branch:  
+`git fetch && git checkout -b 10-components origin/10-components`  
+
+- Components are reusable blocks of code that have both structure and functionality.  
+
+- They help create a more modular and maintainable codebase.  
+
+- Imagine components as "Lego" blocks that can fit together to build something wonderful.  
+
+- For Vue instance we set `el` property to plug it into an element in the DOM.  
+  Whereas component has its own HTML template.  
+
+- Component template should contain exactly one root element.  
+
+- For components data must be a function which returns a data object, that way each component instance will have its own copy of data.  
+
+- Props are used to pass data from parent to child.  
+
+- Props are passed into child components through custom attributes.  
+
+- Props can be bound to the parent component's data.  
+
+- We can specify requirements for the props a component is receiving.  
+
+- Props are meant to be "read-only". Just consume as they are received from parent. Don't modify them.  
+  Why? Because when the data changes in parent it is passed to child, this will update props in place resulting in loss of modifications.  
+
+---
+
 ## License
 [MIT](https://opensource.org/licenses/MIT)  
