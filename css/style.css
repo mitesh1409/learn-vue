@@ -73,3 +73,17 @@ textarea {
   color: #16C0B0;
   text-decoration: underline;
 }
+.strikeThrough {
+  text-decoration: line-through;
+}
+.highlightSale {
+  background-color: #cfcf00;
+  padding: 10px;
+  border: #af0000;
+  border-radius: 5px;
+}
+.onSaleFont {
+  font-size: 16px;
+  font-weight: bold;
+  color: #af0000;
+}

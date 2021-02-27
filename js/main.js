@@ -12,9 +12,9 @@ var app = new Vue({
             title: 'Grey T-Shirt with Vue.js Badge'
         },
 
-        inStock: true,
+        inStock: false,
 
-        onSale: false,
+        onSale: true,
 
         details: [
             'Cotton, Polyester & Rayon Blend',
@@ -51,7 +51,11 @@ var app = new Vue({
             'XXL'
         ],
 
-        cart: 0
+        cart: 0,
+
+        highlightSale: 'highlightSale',
+
+        onSaleFont: 'onSaleFont'
     },
 
     methods: {
