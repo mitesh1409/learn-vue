@@ -299,15 +299,32 @@ Checkout 10-components branch:
 Checkout 11-communicating-events branch:  
 `git fetch && git checkout -b 11-communicating-events origin/11-communicating-events`  
 
-- Child component can emit an event by using `$emit`. We can also pass data along with an event.
+- Child component can emit an event by using `$emit`. We can also pass data along with an event.  
 
-- Parent component can listen to emitted events by using `v-on` directive (shorthand `@`).
+- Parent component can listen to emitted events by using `v-on` directive (shorthand `@`).  
 
-- Parent component can use data emitted along with event.
+- Parent component can use data emitted along with event.  
 
-- Using Props data flows from Parent to Child and using event-listeners data flows from Child to Parent.
+- Using Props data flows from Parent to Child and using event-listeners data flows from Child to Parent.  
 
-- This is very simple to use as far as the use case is simple enough.
+- This is very simple to use as far as the use case is simple enough.  
+
+---
+
+## 12 - Forms and v-model
+
+Checkout 12-forms-and-v-model branch:  
+`git fetch && git checkout -b 12-forms-and-v-model origin/12-forms-and-v-model`  
+
+- Use `v-model` directive to create two-way data binding on form elements.  
+  From template to data and data to template.  
+
+- Use `.prevent` event modifier to stop reloading the page when form is submitted.  
+
+- Find more about modifiers  
+  - [Event Modifiers](https://vuejs.org/v2/guide/events.html#Event-Modifiers)  
+  - [Key Modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers)
+  - [Form Input Modifiers](https://vuejs.org/v2/guide/forms.html#Modifiers)
 
 ---
 
