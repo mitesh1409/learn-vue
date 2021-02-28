@@ -11,7 +11,13 @@
     <div class="nav-bar"></div>
 
     <div id="app">
-        <product :prime-member="primeMember"></product>
+        <div class="cart">
+            <p>Cart ({{ numberOfProductsInCart }})</p>
+        </div>
+
+        <product :prime-member="primeMember"
+            @add-to-cart="addToCart"
+            @remove-from-cart="removeFromCart"></product>
     </div>
 
     <!-- Include Vue.js Development Version -->
