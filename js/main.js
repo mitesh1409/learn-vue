@@ -1,3 +1,115 @@
+Vue.component('product-review', {
+    template: `
+        <form class="review-form" @submit.prevent="submitReview">
+            <p v-if="errors.length">
+                <b>Please correct the following error(s):</b>
+
+                <ul>
+                    <li v-for="error in errors">{{ error }}</li>
+                </ul>
+            </p>
+
+            <p>
+                <label for="name">Name:</label>
+                <input id="name" v-model="name">
+            </p>
+
+            <p>
+                <label for="review">Review:</label>
+                <textarea id="review" v-model="review"></textarea>
+            </p>
+
+            <p>
+                <label for="rating">Rating:</label>
+                <select id="rating" v-model.number="rating">
+                    <option>5</option>
+                    <option>4</option>
+                    <option>3</option>
+                    <option>2</option>
+                    <option>1</option>
+                </select>
+            </p>
+
+            <p>Would you recommend this product?</p>
+
+            <label>
+                Yes
+                <input type="radio" name="recommend" value="yes" v-model="recommend">
+            </label>
+
+            <label>
+                No
+                <input type="radio" name="recommend" value="no" v-model="recommend">
+            </label>
+
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    `,
+
+    data: function () {
+        return {
+            name: null,
+            review: null,
+            rating: null,
+            recommend: null,
+            errors: []
+        }
+    },
+
+    methods: {
+        submitReview() {
+            if (!this.validated()) {
+                return;
+            }
+
+            let productReview = {
+                name: this.name,
+                review: this.review,
+                rating: this.rating,
+                recommend: this.recommend,
+            };
+
+            this.$emit('review-submitted', productReview);
+
+            this.name = null;
+            this.review = null;
+            this.rating = null;
+            this.recommend = null;
+        },
+
+        validated() {
+            // Unset errors.
+            this.errors = [];
+
+            var validated = true;
+
+            if (!this.name) {
+                this.errors.push('Name is required');
+                validated = false;
+            }
+
+            if (!this.review) {
+                this.errors.push('Review is required');
+                validated = false;
+            }
+
+            if (!this.rating) {
+                this.errors.push('Rating is required');
+                validated = false;
+            }
+
+            if (!this.recommend) {
+                this.errors.push('Recommendation is required');
+                validated = false;
+            }
+
+            return validated;
+        }
+    }
+});
+
 Vue.component('product-details', {
     template: `
     <ul v-if="details.length">
@@ -64,6 +176,22 @@ Vue.component('product', {
 
                 <button @click="removeFromCart">Remove from Cart</button>
             </div>
+
+            <div>
+                <h2>Reviews</h2>
+
+                <ul v-if="reviews.length">
+                    <li v-for="review in reviews">
+                        <p>{{ review.name }}</p>
+                        <p>Rating: {{ review.rating }}</p>
+                        <p>{{ review.review }}</p>
+                    </li>
+                </ul>
+
+                <p v-else>There are no reviews yet.</p>
+            </div>
+
+            <product-review @review-submitted="addReview"></product-review>
         </div>
     `,
 
@@ -127,7 +255,9 @@ Vue.component('product', {
 
             highlightSale: 'highlightSale',
 
-            onSaleFont: 'onSaleFont'
+            onSaleFont: 'onSaleFont',
+
+            reviews: []
         };
     },
 
@@ -142,7 +272,11 @@ Vue.component('product', {
 
         updateVariant(variantIndex) {
             this.selectedVariant = variantIndex;
-        } 
+        },
+
+        addReview(review) {
+            this.reviews.push(review);
+        }
     },
 
     computed: {
