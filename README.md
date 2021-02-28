@@ -294,5 +294,22 @@ Checkout 10-components branch:
 
 ---
 
+## 11 - Communicating Events
+
+Checkout 11-communicating-events branch:  
+`git fetch && git checkout -b 11-communicating-events origin/11-communicating-events`  
+
+- Child component can emit an event by using `$emit`. We can also pass data along with an event.
+
+- Parent component can listen to emitted events by using `v-on` directive (shorthand `@`).
+
+- Parent component can use data emitted along with event.
+
+- Using Props data flows from Parent to Child and using event-listeners data flows from Child to Parent.
+
+- This is very simple to use as far as the use case is simple enough.
+
+---
+
 ## License
 [MIT](https://opensource.org/licenses/MIT)  
